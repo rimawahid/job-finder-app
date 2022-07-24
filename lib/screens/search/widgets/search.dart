@@ -7,6 +7,8 @@ import 'package:job_finder_app/screens/search/widgets/search_input.dart';
 import 'package:job_finder_app/screens/search/widgets/search_list.dart';
 import 'package:job_finder_app/screens/search/widgets/search_option.dart';
 
+import '../../../pages/incient_list_page.dart';
+
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
 
@@ -34,7 +36,7 @@ class SearchPage extends StatelessWidget {
             SearchAppBar(),
             SearchInput(),
             SearchOption(),
-            Expanded(child: SearchList())
+            Expanded(child: IncidentListPage())
           ],
         )
       ],)

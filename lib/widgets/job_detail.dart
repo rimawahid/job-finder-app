@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:job_finder_app/widgets/icon_text.dart';
 
 import '../model/job.dart';
+import '../pages/add_incidents_page.dart';
 
 class JobDetail extends StatelessWidget {
   //const JobDetail({Key? key}) : super(key: key);
@@ -120,7 +121,18 @@ class JobDetail extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     )
                   ),
-                  onPressed: (){}, 
+                  
+                  onPressed: (){
+                    FocusScope.of(context).requestFocus(FocusNode());
+                            //_editIncident(
+                            //   context, "${snapshot.data[index].id}");
+
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => AddIncidentsPage(
+                                
+                              ),
+                            ));
+                  }, 
                   child: Text('Apply Now'),),
               ),
           
